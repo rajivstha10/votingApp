@@ -1,0 +1,1 @@
+ F:\\Flutter\\work\\votingApp\\.dart_tool\\flutter_build\\15f7e9e9a5f4eee19acec2cd0c1be6e4\\native_assets.yaml: 
