@@ -2,7 +2,10 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
+import 'package:votingapp/cam_vote/cam_name_widget.dart';
+import 'package:votingapp/cam_vote/cam_vote_widget.dart';
 import 'package:votingapp/core/theme/colors.dart';
 import 'package:votingapp/features/candidates_list_widget.dart';
 import 'package:votingapp/firebase/database_service.dart';
@@ -65,9 +68,18 @@ class _HomeScreenState extends State<HomeScreen> {
             'Voting App',
             style: TextStyle(fontFamily: 'TTMussels'),
           )),
-          actions: const [
-            Icon(Icons.how_to_vote_outlined),
-            Gap(20),
+          actions: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CamNameWidget(),
+                    ));
+              },
+              child: const Icon(Icons.grade_outlined),
+            ),
+            const Gap(20),
           ],
         ),
         body: Padding(
